@@ -32,7 +32,7 @@ export function New() {
                         Qual o seu comprometimento?
                     </Text>
                     <TextInput
-                        className="h-12 pl-4 rounded-lg mt-3 bg-zinc-800 text-white focus:border-2 focus:border-green-600"
+                        className="h-12 pl-4 rounded-lg mt-3 bg-zinc-800 text-white border-2 broder-zinc-400  focus:border-green-600"
                         placeholder="Exercícios, dormir bem, etc..."
                         placeholderTextColor={colors.zinc[400]}
                     >
@@ -43,7 +43,7 @@ export function New() {
                     </Text>
 
                     {
-                        avaiableWeekDays.map((weekDay, index) => {
+                        avaiableWeekDays.map((weekDay, index) => (
                             <CheckBox
                                 key={weekDay}
                                 title={weekDay}
@@ -51,11 +51,11 @@ export function New() {
                                 onPress={() => handleToggleWeekDay(index)}
 
                             />
-                        })
+                        ))
                     }
 
                     <TouchableOpacity 
-                    className="w-full h=14 flex-row items-center justify-center bg-green-600 rounded-md mt-6"
+                    className="w-full h-14 flex-row items-center justify-center bg-green-600 rounded-md mt-6"
                     activeOpacity={0.7}
                     >
                         <Feather 
